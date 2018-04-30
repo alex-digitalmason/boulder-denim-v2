@@ -1,0 +1,147 @@
+<div class="hero clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <img class="jeans-image" src="/assets/refer/jeans-refer-page.png" alt="">
+            </div>
+            <div class="refer-header-text col-sm-4">
+                <img class="partial-boulder-logo" src="/assets/refer/partial-boulder-logo.svg" alt="">
+                <h3 class="why brandon">Tell everyone about us & get free stuff</h3>
+                <p class="title brandon">We’re all about the buddy system</p>
+                <p class="subtitle brandon">Share this personal link with your Facebook or Twitter and get free climbing swag for each friend who signs up.</p>
+                <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+                <% twitter_message = "Want to see what happens when fashion and adventure combine? Check out @BoulderDenim:" %>
+                <div class="social-links">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="facebook social" target="_blank">
+                        <img src="/assets/refer/social-facebook.png" alt="">
+                    </a>
+                    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twitter social" target="_blank">
+                        <img src="/assets/refer/social-twitter.png" alt="">
+                    </a>
+                    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="google social" target="_blank">
+                        <img src="/assets/refer/social-google.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% 
+    max_ref_count = 60
+
+    referrals_count = @user.referrals.count
+
+    stops = User::REFERRAL_STEPS
+
+    found = nil
+
+    stops.reverse_each { |stop|
+        if stop["count"] <= referrals_count and !found
+            stop["selected"] = true
+            found = stop
+        else
+            stop["selected"] = false
+        end
+    }   
+ %>
+<div class="prizes <% if found %>prize-<%= found["class"] %><% end %> prizes-lg hidden-xs">
+    <div class="page-content container">
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <% if referrals_count == 0 %>
+                    <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+                <% else %>
+                    <p class="place brandon">You've invited <span><%= referrals_count %> friend<% if referrals_count > 1 %>s<% end %></span></p>
+                <% end %>
+            </div>
+        </div>
+        <div class="product-numbers row clearfix">
+            <div class="title brandon col-sm-2">
+                <p class="friends">Friends Joined</p>
+            </div>
+            <% stops.each do |stop| %>
+                <div class="title brandon col-sm-2">
+                    <div class="diamond">
+                        <div class="diamond-number">
+                            <%= stop["count"] %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="progress">
+                    <div class="mover">
+                        <div class="bar clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description row clearfix">
+            <div class="title brandon col-sm-2">
+                <p class="friends">Free Stuff</p>
+            </div>
+            <% stops.each do |stop| %>
+                <div class="product brandon col-sm-2 <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'six' %>last<% end %>">
+                    <div class="sep"></div>
+                    <p class="prize-name"><%= stop["html"].html_safe %></p>
+                    <img src="<%= stop["image"] %>" alt="">
+                </div>
+            <% end %>
+        </div> 
+    </div>
+</div>
+
+
+<div class="prizes <% if found %>prize-<%= found["class"] %><% end %> prizes-sm hidden-sm hidden-md hidden-lg">
+    <div class="page-content container">
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <% if referrals_count == 0 %>
+                    <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+                <% else %>
+                    <p class="place brandon">You've invited <span><%= referrals_count %> friend<% if referrals_count > 1 %>s<% end %></span></p>
+                <% end %>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="title col-xs-6">
+                <p class="friends">Friends Joined</p>
+            </div>
+            <div class="title col-xs-6">
+                <p class="rewards">Free Stuff</p>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="product-description col-xs-6">
+                <% stops.each do |stop| %>
+                    <div class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'six' %>last<% end %>">
+                        <div class="sep"></div>
+                        <p class="prize-name"><%= stop["html"].html_safe %></p>
+                        <img src="<%= stop["image"] %>" alt="">
+                    </div>
+                <% end %>
+            </div> 
+            <div class="progress-bar col-xs-1">
+                <div class="progress">
+                    <div class="mover">
+                        <div class="bar clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-numbers col-xs-5">
+                <% stops.each do |stop| %>
+                    <div class="diamond-wrap brandon">
+                        <div class="diamond">
+                            <div class="diamond-number">
+                                <%= stop["count"] %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

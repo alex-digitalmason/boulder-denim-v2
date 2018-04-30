@@ -1,0 +1,745 @@
+@import url(https://fonts.googleapis.com/css?family=Khand:400,600,700);
+
+html {
+	font-family: 'Khand', sans-serif;
+}
+
+form{
+	margin-bottom: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* Home */
+
+html.home{
+	background: #212737;
+}
+
+#home{
+	padding-bottom: 50px;
+}
+
+#home .page-content{
+	width: 1400px;
+	margin: 0 auto;
+}
+
+#home .hero{
+	background-color: #fff;
+	position: relative;
+	letter-spacing: .09em;
+}
+
+img {
+	max-width: 100%;
+}
+
+#home .hero .large{
+	font-weight: 600;
+	font-size: 40px;
+	color: #ce6f44;
+	text-transform: uppercase;
+	margin: 15px 0 0 0;
+	position: relative;
+	z-index: 2;
+	letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+	#home .hero .large {
+		margin: 85px 0 0 0;
+	}
+}
+
+#home .hero .small{
+	font-weight: 400;
+	color: #50423e;
+	font-size: 18px;
+	margin: 10px 0 0 0px;
+	line-height: 30px;
+	position: relative;
+	z-index: 2;
+	letter-spacing: 1px;
+}
+
+#home .hero .boulder-denim-logo-col {
+	height: 100px;
+	position: relative;
+}
+
+#home .hero .boulder-denim-logo {
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+}
+
+@media (min-width: 768px) {
+
+	#home .hero .boulder-denim-logo-col {
+		height: 22px;
+		position: relative;
+	}
+
+	#home .hero .boulder-denim-logo {
+		top: -80px;
+	}
+}
+
+.footer-content {
+	padding-top: 102px;
+	margin-bottom: 50px;
+}
+
+#home .form-wrap{
+
+}
+
+.form-row {
+	padding: 0px 15px;
+}
+
+#home .form-wrap .byline{
+	color: #fff;
+	font-size: 19px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 15px 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#home .form-wrap .column {
+	padding: 0;
+}
+
+#home .form-wrap .email{
+	border: 1px solid #ce6f44;
+	border-radius: 0px;
+	box-sizing: border-box;
+	float: left;
+	font-size: 16px;
+	font-weight: 600;
+	height: 35px;
+	letter-spacing: 1px;
+	outline: none;
+	padding: 8px 0px 8px 8px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   line-height: 28px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   line-height: 28px;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   line-height: 28px;  
+}
+
+:-ms-input-placeholder {  
+   line-height: 28px;  
+}
+
+#home .form-wrap .submit{
+	background: #ce6f44;
+	border: none;
+	border-radius: 0px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-size: 16px;
+	font-weight: 600;
+	height: 35px;
+	letter-spacing: 2px;
+	padding: 9px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+.submit:focus {
+  outline: none;
+}
+
+#home .form-wrap.ended{
+	width: 500px;
+	margin-top: 27px;
+}
+
+#home .form-wrap.ended .thanks{
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #074e6f;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 1px;
+	line-height: 36px;
+	margin-bottom: 14px;
+}
+
+#home .form-wrap.ended .compiling{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #555556;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+#home .form-wrap.ended .go-to{
+	font-style: italic;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#home .form-wrap.ended .go-to a{
+	color: #074e6f;
+	font-size: 19px;
+	font-weight:bold;
+	text-transform: uppercase;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#home .form-wrap.ended .go-to a:hover{
+	color: #955F5D;
+}
+
+#home .form-wrap.ended .again{
+	font-weight: 500;
+	color: #555556;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+}
+
+#home .form-wrap.ended{
+	width: 500px;
+	margin-top: 27px;
+}
+
+#home .form-wrap.ended .thanks{
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #074e6f;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 1px;
+	line-height: 36px;
+	margin-bottom: 14px;
+}
+
+#home .form-wrap.ended .compiling{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #555556;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+#home .form-wrap.ended .go-to{
+	font-style: italic;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#home .form-wrap.ended .go-to a{
+	color: #074e6f;
+	font-size: 19px;
+	font-weight:bold;
+	text-transform: uppercase;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#home .form-wrap.ended .go-to a:hover{
+	color: #955F5D;
+}
+
+#home .form-wrap.ended .again{
+	font-weight: 500;
+	color: #555556;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+
+/* Refer a friend page */
+
+.wf-loading .brandon{
+	visibility: hidden;
+}
+
+.brandon{
+	font-family: 'Khand', sans-serif;
+}
+
+#refer{
+	background: #fff;
+}
+
+#refer .page-content{
+	z-index: 0;
+	position: relative;
+}
+
+#refer .refer-header-text {
+	text-align: center;
+}
+
+#refer .partial-boulder-logo {
+	max-width: 80px;
+}
+
+#refer .hero{
+	background: #fff;
+	padding-top: 50px;
+}
+
+#refer .why{
+	font-size: 35px;
+	line-height: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #39434e;
+	margin-top: 18px;
+	letter-spacing: .05em;
+}
+
+#refer .title{
+	font-size: 20px;
+	color: #726660;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+#refer .subtitle{
+	color: #565656;
+	font-size: 16px;
+	text-transform: none;
+	margin-top: 5px;
+}
+
+#refer .copy-link{
+	border: 1px solid #D1D0C7;
+	box-shadow: inset 0 0 15px rgba(209, 208, 199, .5);
+	font-size: 16px;
+	margin: 20px auto 0;
+	padding: 10px 0;
+	text-transform: none;
+}
+
+#refer .social-links{
+	margin: 25px 0;
+	text-align: center;
+}
+
+#refer .social-links a, #refer .social-links div{
+	display: inline-block;
+}
+
+.social {
+	display: inline-block;
+	margin: 0 5px;
+	text-align: center;
+	width: 35px;
+}
+
+#refer .prizes{
+	width: 100%;
+	background: #f1f0f0;
+	border-top: 1px solid #D2D1C8;
+	padding-bottom: 100px;
+}
+
+#refer .prizes .page-content{
+	position: relative;
+}
+
+#refer .prizes .callout{
+	text-align: center;
+	font-size: 16px;
+	color: #074E6F;
+	font-weight: bold;
+	margin: 20px 0 0 0;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.progress-bar {
+	height: 850px;
+	padding: 0px 2.5% 0px 2.5%;
+  width: 4px;
+}
+
+#refer .prizes .progress{
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: inset 0 0 2px #ebebeb;
+	margin: 0;
+	top: 75px;
+	width: 4px;
+	z-index: 0;
+}
+
+#refer .prizes .progress .mover{
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#refer .prizes .progress .mover .bar{
+	background-color: #dc6733;
+	height: 2.5%;
+	min-height: 20px;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+
+	#refer .prizes .progress .mover .bar{
+		height: 100%;
+		width: 16.66666667%;
+	}
+}
+
+#refer .prize-two .progress .mover .bar{ height: 7.5%; width: 100%; }
+#refer .prize-three .progress .mover .bar{ height: 27.5%; width: 100%; }
+#refer .prize-four .progress .mover .bar{ height: 47.5%; width: 100%; }
+#refer .prize-five .progress .mover .bar{ height: 67.5%; width: 100%; }
+#refer .prize-six .progress .mover .bar{ height: 87.5%; width: 100%; }
+
+@media (min-width: 768px) {
+	#refer .prize-two .progress .mover .bar{ height: 100%; width: 24.5%; }
+	#refer .prize-three .progress .mover .bar{ height: 100%; width: 41.5%; }
+	#refer .prize-four .progress .mover .bar{ height: 100%; width: 58.5%; }
+	#refer .prize-five .progress .mover .bar{ height: 100%; width: 75.75%; }
+	#refer .prize-six .progress .mover .bar{ height: 100%; width: 92.75%; }
+}
+
+@media (min-width: 768px) {
+
+	.progress-bar {
+		height: auto;
+		padding: 0 15px;
+		width: 100%;
+	}
+
+	#refer .prizes .progress{
+		height: 4px;
+		margin: 25px 0;
+		width: 100%;
+	}
+}
+
+
+#refer .prizes .products{
+	margin-top: 30px;
+	position: relative;
+	z-index: 1;
+}
+
+#refer .prizes .title{
+	color: #39434e;
+	font-weight: 500;
+	font-size: 14px;
+	font-weight: bold;
+	height: 100%;
+	letter-spacing: 2px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+#refer .prizes .friends{
+	margin: 20px 0;
+	text-align: center;
+}
+
+#refer .prizes .rewards{
+	margin: 20px 0;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+
+	#refer .prizes .friends{
+		margin: 0;
+		text-align: left;
+	}
+
+	#refer .prizes .rewards{
+		margin: 0;
+		text-align: left;
+	}
+
+}
+
+#refer .prizes .product{
+	height: 20%;
+	color: #074E6F;
+	position: relative;
+	text-align: center
+}
+
+.product-numbers {
+	height: 850px;
+	margin-top: 50px;
+}
+
+.diamond-wrap {
+	height: 20%;
+}
+
+@media (min-width: 768px) {
+	.product-numbers {
+		height: auto;
+		margin-top: 0px;
+	}
+
+	.diamond-wrap {
+		height: auto;
+	}
+}
+
+#refer .product-numbers .diamond{
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 32px;
+	color: #fff;
+	overflow: hidden;
+	background: #726660;
+	font-weight: bold;
+	margin: 0 auto;
+
+  -moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.diamond-number {
+  -moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#refer .prizes .products li.product .sep{
+	width: 12px;
+	height: 2px;
+	background: transparent;
+	margin: 13px auto 13px;
+}
+
+.product-description {
+	height: 850px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.product-description {
+		height: auto;
+		margin-top: 0px;
+	}
+}
+
+#refer .prizes .products li.product .caret{
+	width: 100%;
+	height: 10px;
+	background: image-url("refer/caret.png") center center no-repeat;
+	background-size: 16px 10px;
+	position: absolute;
+	bottom: -15px;
+}
+
+#refer .prizes .products li.product.selected .caret{
+	background: image-url("refer/caret-selected.png") center center no-repeat;
+	background-size: 16px 10px;
+}
+
+#refer .prizes .products li.product p{
+	text-align: center;
+	font-weight: 500;
+}
+
+#refer .prizes .products li.product:last-child{
+	margin-right: 0;
+}
+
+#refer .prizes .products li.product.last{
+	margin-right: 0;
+}
+
+#refer .prizes .products li.product.selected .circle{
+	background: #995F5E !important;
+	border-color: #995F5E !important;
+	color: #FFF !important;
+}
+
+
+#refer .prizes .products li.product.selected p{
+	color: #995F5E !important;
+}
+
+#refer .prizes p.place{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #948b8e;
+	width: 100%;
+	font-weight: 500;
+	margin: 30px 0;
+	text-transform: uppercase;
+}
+
+#refer .prizes p.place span{
+	color: #995F5E;
+}
+
+#refer .prizes p.check{
+	text-align: center;
+	font-size: 16px;
+	color: #858181;
+	width: 100%;
+	font-weight: 500;
+	margin-top: 5px;
+}
+
+#refer .prizes p.ship{
+	text-align: center;
+	font-size: 16px;
+	color: #858181;
+	width: 100%;
+	font-weight: 500;
+	margin-top: 50px;
+}
+
+#refer .prizes a.policy{
+	text-align: center;
+	font-size: 12px;
+	color: #CCCCCC;
+	width: 100%;
+	font-weight: 500;
+	margin-top: 5px;
+	display: block;
+	text-decoration: none;
+}
+
+#refer .prize-name {
+	color: #948b8e;
+	font-weight: 800;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+
+
+/*
+	RETINA
+*/
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+
+	#home .form-wrap .key{
+		background: image-url("home/key@2x.png") 0 0 no-repeat;
+		background-size: 46px 19px;
+	}
+
+	#refer .header .logo{
+		background: image-url("refer/logo@2x.png") 0 0 no-repeat;
+		background-size: 106px 19px;
+	}
+
+	#refer .mammoth{
+		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
+		background-size: 610px 394px;
+	}
+
+	#refer .prizes .products li.product .caret{
+		background: image-url("refer/caret@2x.png") center center no-repeat;
+		background-size: 16px 10px;
+	}
+
+	#refer .prizes .products li.product.selected .caret{
+		background: image-url("refer/caret-selected@2x.png") center center no-repeat;
+		background-size: 16px 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

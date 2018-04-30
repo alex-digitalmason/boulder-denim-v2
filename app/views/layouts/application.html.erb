@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
+<head>
+        <title>Boulder Denim &#124; Tell friends, get stuff</title>
+        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+
+        <meta property="og:title" content="Time for denim filled adventure"/>
+        <meta property="og:description" content="Jeans that are as flexible as me? Can’t wait to wear a pair of @Boulder Denim. Check them out and support their campaign!"/>
+        <meta property="og:image" content="<%= request.base_url + asset_path("home/pants-homepage.png") %>"/>
+        <meta property="og:url" content="<%= root_url %>"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <%= stylesheet_link_tag "application", :media => "all" %>
+        <%= csrf_meta_tags %>
+        <script>
+                (function() {
+                        var _fbq = window._fbq || (window._fbq = []);
+                        if (!_fbq.loaded) {
+                                var fbds = document.createElement('script');
+                                fbds.async = true;
+                                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(fbds, s);
+                                _fbq.loaded = true;
+                        }
+                })();
+                window._fbq = window._fbq || [];
+                window._fbq.push(['track', '6032940758515', {'value':'0.00','currency':'USD'}]);
+        </script>
+        <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6032940758515&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+</head>
+<body id="<%= @bodyId %>">
+
+<%= yield %>
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+development:
+  adapter: sqlite3
+  database: prelaunchr
+  host: localhost
+test:
+  adapter: sqlite3
+  database: prelaunchr
+  host: localhost
